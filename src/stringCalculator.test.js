@@ -16,5 +16,10 @@ test("returns sum of two numbers", () => {
 
 test("handles new lines as delimiter along with commas", () => {
   expect(add("1\n2,3")).toBe(6);
-  expect(add("4\n5\n6")).toBe(15);
+  expect(add("4\n5\n,6")).toBe(15);
+});
+
+test("supports different delimiters", () => {
+  expect(add("//;\n1;2")).toBe(3);
+  expect(add("//:\n4:5:6")).toBe(15);
 });

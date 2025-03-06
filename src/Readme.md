@@ -25,3 +25,8 @@
 
 ![alt text](image-5.png)
 
+### Handle custom delimiter (Failing)
+![alt text](image-6.png)
+
+### Handle custom delimiter (Passed)
+![alt text](image-7.png)
