@@ -30,3 +30,11 @@
 
 ### Handle custom delimiter (Passed)
 ![alt text](image-7.png)
+
+### Handle negative numbers (Failing)
+
+![alt text](image-8.png)
+
+### Handle negative numbers (Passed)
+
+![alt text](image-9.png)

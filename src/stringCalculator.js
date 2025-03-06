@@ -13,6 +13,14 @@ function add(numbers) {
   // Split by the delimiter and map to numbers
   const numberArray = numbers.split(delimiter).map((num)=>Number(num));
 
+  // handle negative numbers
+  const negativeNumbers = numberArray.filter(num => num < 0);
+  
+  if (negativeNumbers.length) {
+    throw new Error(`negative numbers not allowed ${negativeNumbers.join(",")}`);
+  }
+
+
   return numberArray.reduce((acc, curr) => {
     return acc + Number(curr);
   }, 0);

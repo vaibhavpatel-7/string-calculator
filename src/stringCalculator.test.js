@@ -23,3 +23,11 @@ test("supports different delimiters", () => {
   expect(add("//;\n1;2")).toBe(3);
   expect(add("//:\n4:5:6")).toBe(15);
 });
+
+test("throws error for negative numbers", () => {
+  expect(() => add("1,-2,-3")).toThrow("negative numbers not allowed -2");
+});
+
+test("shows all negative numbers in error message", () => {
+  expect(() => add("1,-1,-2,-3")).toThrow("negative numbers not allowed -1,-2,-3");
+});
